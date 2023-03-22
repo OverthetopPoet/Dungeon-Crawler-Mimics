@@ -1,0 +1,4 @@
+The ranger is a nimble fighter.
+Using their bow, they can engage enemies at range and keep them from coming closer.
+Their increased speed allows them to stay at a distance even longer,
+And run away from monsters trying to surround them.

@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/Inventory/InventoryDisplay.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Inventories/Player_Inventory.tres" type="Resource" id=2]
+[ext_resource path="res://Assets/UI/Inventory4x5.png" type="Texture" id=3]
+
+[node name="InventoryDisplay" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 534.0
+script = ExtResource( 1 )
+inventory = ExtResource( 2 )
+inv_grid = NodePath("TextureRect/GridContainer")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -194.0
+margin_top = -154.0
+margin_right = -66.0
+margin_bottom = -52.0
+rect_scale = Vector2( 3, 3 )
+texture = ExtResource( 3 )
+
+[node name="GridContainer" type="GridContainer" parent="TextureRect"]
+anchor_left = 0.047
+anchor_top = 0.049
+anchor_right = 0.047
+anchor_bottom = 0.049
+margin_left = 2.984
+margin_top = 3.002
+margin_right = 115.984
+margin_bottom = 93.002
+columns = 5

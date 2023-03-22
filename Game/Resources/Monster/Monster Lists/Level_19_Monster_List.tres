@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=11 format=2]
+
+[ext_resource path="res://Scripts/Monster/BP_monster_list.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Monster/Monsters/bosses/nightmare.tres" type="Resource" id=2]
+[ext_resource path="res://Resources/Monster/Monsters/demons/nefarious _scamp.tres" type="Resource" id=3]
+[ext_resource path="res://Resources/Monster/Monsters/demons/antlered_rascal.tres" type="Resource" id=4]
+[ext_resource path="res://Resources/Monster/Monsters/demons/blinded_grimlock.tres" type="Resource" id=5]
+[ext_resource path="res://Resources/Monster/Monsters/demons/clawed_abomination.tres" type="Resource" id=6]
+[ext_resource path="res://Resources/Monster/Monsters/demons/pointed_demonspawn.tres" type="Resource" id=7]
+[ext_resource path="res://Resources/Monster/Monsters/demons/pronged_fury.tres" type="Resource" id=8]
+[ext_resource path="res://Resources/Monster/Monsters/demons/skewering_stalker.tres" type="Resource" id=9]
+[ext_resource path="res://Resources/Monster/Monsters/demons/foul_gouger.tres" type="Resource" id=10]
+
+[resource]
+script = ExtResource( 1 )
+monsters = [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 10 ), ExtResource( 3 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ]
+boss = ExtResource( 2 )

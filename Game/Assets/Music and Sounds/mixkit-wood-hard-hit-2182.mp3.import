@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/mixkit-wood-hard-hit-2182.mp3-a3bf8ce4557b882eb160dbba622159dc.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music and Sounds/mixkit-wood-hard-hit-2182.mp3"
+dest_files=[ "res://.import/mixkit-wood-hard-hit-2182.mp3-a3bf8ce4557b882eb160dbba622159dc.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

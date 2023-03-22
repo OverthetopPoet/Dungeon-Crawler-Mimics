@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=7 format=2]
+
+[ext_resource path="res://Scripts/Monster/BP_monster_list.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Monster/Monsters/bosses/glaring_overlord.tres" type="Resource" id=2]
+[ext_resource path="res://Resources/Monster/Monsters/beholders/bloodshot_eye.tres" type="Resource" id=3]
+[ext_resource path="res://Resources/Monster/Monsters/beholders/floating_eye.tres" type="Resource" id=4]
+[ext_resource path="res://Resources/Monster/Monsters/beholders/ghastly_beholder.tres" type="Resource" id=5]
+[ext_resource path="res://Resources/Monster/Monsters/beholders/ocular_watcher.tres" type="Resource" id=6]
+
+[resource]
+script = ExtResource( 1 )
+monsters = [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ]
+boss = ExtResource( 2 )

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/mixkit-dagger-woosh-1487.mp3-21a65d0b06bdd4e4b987067ccff964bb.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music and Sounds/mixkit-dagger-woosh-1487.mp3"
+dest_files=[ "res://.import/mixkit-dagger-woosh-1487.mp3-21a65d0b06bdd4e4b987067ccff964bb.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

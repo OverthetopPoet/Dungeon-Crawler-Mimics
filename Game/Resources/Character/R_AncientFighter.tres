@@ -1,0 +1,29 @@
+[gd_resource type="Resource" load_steps=9 format=2]
+
+[ext_resource path="res://Resources/Character/SpriteFrames/SpriteFrames_AncientFighter.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://Resources/Character/CollisionShapes/C_AncientFighter.tres" type="Shape2D" id=2]
+[ext_resource path="res://Scripts/Character/BP_Character.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Characters/Edited Animations/Ancient Fighter Animation_Sheet.png" type="Texture" id=4]
+[ext_resource path="res://Resources/Character/Skills/Fire/Fire_Projectile.tres" type="Resource" id=5]
+[ext_resource path="res://Resources/Character/Skills/Physical/Melee.tres" type="Resource" id=6]
+[ext_resource path="res://Resources/Character/Skills/Holy/Holy_Heal.tres" type="Resource" id=7]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 16, 16, 16 )
+
+[resource]
+script = ExtResource( 3 )
+characterName = "Warrior"
+characterCollisionShape = ExtResource( 2 )
+characterAnimations = ExtResource( 1 )
+characterPortrait = SubResource( 1 )
+startingSkills = [ ExtResource( 6 ), ExtResource( 5 ), ExtResource( 7 ) ]
+characterDescription = "The fighter is a skilled combatant.
+Using his sword, he can deal heavy blows to those around him.
+Armor and shield help him survive even longer in close proximity to his enemies."
+initiative = 3
+stamina = 8
+characterLevel = 0
+characterXP = 0
+characterHealth = 80

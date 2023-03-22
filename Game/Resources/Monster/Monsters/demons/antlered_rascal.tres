@@ -1,0 +1,55 @@
+[gd_resource type="Resource" load_steps=11 format=2]
+
+[ext_resource path="res://Resources/Items/Tradeable/demonic_essence.tres" type="Resource" id=1]
+[ext_resource path="res://Assets/Monsters/monster_animations/antleredrascalidleFront.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Monsters/statues/statue_antleredrascalidleFront.png" type="Texture" id=3]
+[ext_resource path="res://Scripts/Monster/BP_Monster.gd" type="Script" id=4]
+[ext_resource path="res://Resources/Character/Skills/Physical/Melee.tres" type="Resource" id=5]
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 2 )
+region = Rect2( 16, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 2 )
+region = Rect2( 32, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 2 )
+region = Rect2( 48, 0, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[resource]
+script = ExtResource( 4 )
+monsterName = "Antlered Rascal"
+description = "Never make a deal with the devil."
+isBoss = false
+initiative = 0
+monsterDrop = ExtResource( 1 )
+max_drop_amount = 1
+wakeup_radius = 72
+monster_type = "Weakling"
+stamina = 2
+health = 80
+armor = 0
+damage = 0
+xp_drop = 10
+damage_type = ""
+attack_range = 1
+monster_skills = [ ExtResource( 5 ) ]
+elemental_weakness0 = ""
+elemental_weakness1 = ""
+elemental_weakness2 = ""
+monsterAnimations = SubResource( 2 )
+characterPortrait = ExtResource( 3 )

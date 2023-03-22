@@ -1,0 +1,12 @@
+[gd_resource type="Resource" load_steps=6 format=2]
+
+[ext_resource path="res://Scripts/Monster/BP_monster_list.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Monster/Monsters/bosses/lizardfolk_tracker.tres" type="Resource" id=2]
+[ext_resource path="res://Resources/Monster/Monsters/lizardfolk/lizardfolk_archer.tres" type="Resource" id=3]
+[ext_resource path="res://Resources/Monster/Monsters/lizardfolk/lizardfolk_spearman.tres" type="Resource" id=4]
+[ext_resource path="res://Resources/Monster/Monsters/lizardfolk/lizardfolk_gladiator.tres" type="Resource" id=5]
+
+[resource]
+script = ExtResource( 1 )
+monsters = [ ExtResource( 3 ), ExtResource( 5 ), ExtResource( 4 ) ]
+boss = ExtResource( 2 )

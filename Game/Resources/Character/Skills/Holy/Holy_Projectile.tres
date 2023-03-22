@@ -1,0 +1,76 @@
+[gd_resource type="Resource" load_steps=17 format=2]
+
+[ext_resource path="res://Scripts/Character/BP_Skills.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Effects and Icons/Skills/Holy/Holy VFX 01 Repeatable.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Effects and Icons/Skills/Holy/Holy VFX 01 Initial.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Music and Sounds/mixkit-magic-wand-sparkle-3062.mp3" type="AudioStream" id=4]
+[ext_resource path="res://Assets/Effects and Icons/Icons/holy_projectile.png" type="Texture" id=5]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 3 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 2 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 2 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 2 )
+region = Rect2( 96, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 2 )
+region = Rect2( 128, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 2 )
+region = Rect2( 160, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 2 )
+region = Rect2( 192, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 2 )
+region = Rect2( 224, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=11]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ],
+"loop": false,
+"name": "default",
+"speed": 20.0
+} ]
+
+[resource]
+script = ExtResource( 1 )
+name = "Holy Blast"
+description = "Shoots radiant energy towards your enemy."
+level = 1
+cooldown = 4
+turn_cost = 1
+is_on_cooldown = false
+current_cooldown = 0
+skill_type = ""
+elemental_type = "holy"
+effect = "blind"
+damage = 6
+heal = 0
+cast_range = 2
+travel_range = 3
+aoe_range = 0
+icon = ExtResource( 5 )
+sound_effect = ExtResource( 4 )
+animation = SubResource( 11 )

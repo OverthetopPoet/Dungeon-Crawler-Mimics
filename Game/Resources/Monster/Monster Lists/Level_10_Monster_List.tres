@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=9 format=2]
+
+[ext_resource path="res://Scripts/Monster/BP_monster_list.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Monster/Monsters/bosses/Archlich.tres" type="Resource" id=2]
+[ext_resource path="res://Resources/Monster/Monsters/undead/zombie_hand.tres" type="Resource" id=3]
+[ext_resource path="res://Resources/Monster/Monsters/undead/mutilated_stumbler.tres" type="Resource" id=4]
+[ext_resource path="res://Resources/Monster/Monsters/undead/toxic_hound.tres" type="Resource" id=5]
+[ext_resource path="res://Resources/Monster/Monsters/undead/zombie.tres" type="Resource" id=6]
+[ext_resource path="res://Resources/Monster/Monsters/undead/carcass_feeder.tres" type="Resource" id=7]
+[ext_resource path="res://Resources/Monster/Monsters/undead/dismembered_crawler.tres" type="Resource" id=8]
+
+[resource]
+script = ExtResource( 1 )
+monsters = [ ExtResource( 6 ), ExtResource( 3 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 7 ), ExtResource( 8 ) ]
+boss = ExtResource( 2 )

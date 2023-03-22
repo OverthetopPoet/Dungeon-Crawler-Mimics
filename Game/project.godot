@@ -1,0 +1,290 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Resource",
+"class": "Consumable_Item",
+"language": "GDScript",
+"path": "res://Scripts/Item/BP_Consumable_Item.gd"
+}, {
+"base": "Resource",
+"class": "Inventory",
+"language": "GDScript",
+"path": "res://Scripts/Inventory/Inventory.gd"
+}, {
+"base": "CenterContainer",
+"class": "InventorySlot",
+"language": "GDScript",
+"path": "res://Scripts/Inventory/InventorySlot.gd"
+}, {
+"base": "Resource",
+"class": "Item",
+"language": "GDScript",
+"path": "res://Scripts/Item/BP_Item.gd"
+}, {
+"base": "Resource",
+"class": "Tradeable_Item",
+"language": "GDScript",
+"path": "res://Scripts/Item/BP_Tradeable_Item.gd"
+}, {
+"base": "Resource",
+"class": "Wearable_Item",
+"language": "GDScript",
+"path": "res://Scripts/Item/BP_Wearable_Item.gd"
+}, {
+"base": "Node",
+"class": "battle_system",
+"language": "GDScript",
+"path": "res://Scripts/Battlesystem/Battle_System.gd"
+}, {
+"base": "Node2D",
+"class": "cast_skill",
+"language": "GDScript",
+"path": "res://Scripts/Character/Skills.gd"
+}, {
+"base": "Resource",
+"class": "character",
+"language": "GDScript",
+"path": "res://Scripts/Character/BP_Character.gd"
+}, {
+"base": "Resource",
+"class": "dialogue",
+"language": "GDScript",
+"path": "res://Scripts/GUI/BP_Dialogue.gd"
+}, {
+"base": "Node2D",
+"class": "dungeon",
+"language": "GDScript",
+"path": "res://Scripts/Dungeon logic/dungeon.gd"
+}, {
+"base": "Area2D",
+"class": "lootBag",
+"language": "GDScript",
+"path": "res://Scripts/Item/Lootbag.gd"
+}, {
+"base": "Resource",
+"class": "monster",
+"language": "GDScript",
+"path": "res://Scripts/Monster/BP_Monster.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "monsterObject",
+"language": "GDScript",
+"path": "res://Scripts/Monster/Monster.gd"
+}, {
+"base": "Resource",
+"class": "monster_list",
+"language": "GDScript",
+"path": "res://Scripts/Monster/BP_monster_list.gd"
+}, {
+"base": "AnimatedSprite",
+"class": "npc",
+"language": "GDScript",
+"path": "res://Scripts/Tavern/NPC.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "playable_Character",
+"language": "GDScript",
+"path": "res://Scripts/Character/Character.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "playable_Character_Tavern",
+"language": "GDScript",
+"path": "res://Scripts/Character/CharacterTavern.gd"
+}, {
+"base": "Resource",
+"class": "skill",
+"language": "GDScript",
+"path": "res://Scripts/Character/BP_Skills.gd"
+}, {
+"base": "AnimatedSprite",
+"class": "skill_hit",
+"language": "GDScript",
+"path": "res://Scripts/Character/Skill_Hit.gd"
+}, {
+"base": "AnimatedSprite",
+"class": "skill_travel",
+"language": "GDScript",
+"path": "res://Scripts/Character/Skill_Travel.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "statueObject",
+"language": "GDScript",
+"path": "res://Scripts/Monster/Statue.gd"
+}, {
+"base": "Node2D",
+"class": "tavern",
+"language": "GDScript",
+"path": "res://Scripts/Tavern/Tavern.gd"
+} ]
+_global_script_class_icons={
+"Consumable_Item": "",
+"Inventory": "",
+"InventorySlot": "",
+"Item": "",
+"Tradeable_Item": "",
+"Wearable_Item": "",
+"battle_system": "",
+"cast_skill": "",
+"character": "",
+"dialogue": "",
+"dungeon": "",
+"lootBag": "",
+"monster": "",
+"monsterObject": "",
+"monster_list": "",
+"npc": "",
+"playable_Character": "",
+"playable_Character_Tavern": "",
+"skill": "",
+"skill_hit": "",
+"skill_travel": "",
+"statueObject": "",
+"tavern": ""
+}
+
+[application]
+
+config/name="Dungeon-crawler-spiepro-gruppe 4"
+run/main_scene="res://Scenes/main_screen.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+EventManager="*res://Subsystem/EventManager.gd"
+
+[display]
+
+window/stretch/mode="viewport"
+
+[global]
+
+stretch=false
+
+[input]
+
+left={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":65,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+right={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":68,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+up={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":87,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+down={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":83,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+interact={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":69,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+quickSlot_1={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":49,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+quickSlot_2={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":50,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+quickSlot_3={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":51,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+quickSlot_4={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":52,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+quickSlot_5={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":53,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+quickSlot_6={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":54,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+quickSlot_7={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":55,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+quickSlot_8={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":56,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+quickSlot_9={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":57,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+quickSlot_0={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":48,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+back={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777217,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+diary={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":84,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+OpenInv={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":73,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+testing={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":86,"unicode":0,"echo":false,"script":null)
+ ]
+}
+
+[layer_names]
+
+2d_render/layer_3="Player"
+2d_render/layer_4="walls and objects"
+2d_render/layer_5="interaction_area"
+2d_physics/layer_3="Player"
+2d_physics/layer_4="Walls and Objects"
+2d_physics/layer_5="interaction_area"
+2d_physics/layer_6="AreaTrap"
+2d_physics/layer_7="Monsters"
+2d_physics/layer_8="ActivationTrap"
+2d_physics/layer_9="Lootbag"
+2d_physics/layer_10="Wakeup Shape"
+2d_physics/layer_11="Wakeup Trigger"
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"

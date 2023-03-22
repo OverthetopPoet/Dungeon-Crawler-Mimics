@@ -1,0 +1,130 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Assets/UI/GUI.png" type="Texture" id=1]
+[ext_resource path="res://Assets/UI/Pause Menu.png" type="Texture" id=2]
+[ext_resource path="res://Assets/UI/MinimalPixel v2.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Scripts/GUI/exit_level_screen.gd" type="Script" id=4]
+
+
+[sub_resource type="DynamicFont" id=7]
+size = 32
+font_data = ExtResource( 3 )
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 1 )
+region = Rect2( 113, 81, 30, 14 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 1 )
+region = Rect2( 113, 97, 30, 14 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 1 )
+region = Rect2( 113, 113, 30, 14 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 7
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 7
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 7
+font_data = ExtResource( 3 )
+
+[node name="exit_level_screen" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 4 )
+
+[node name="Panel" type="Panel" parent="."]
+modulate = Color( 1, 1, 1, 0.870588 )
+margin_right = 1024.0
+margin_bottom = 600.0
+rect_scale = Vector2( 0.999295, 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 337.0
+margin_top = 125.0
+margin_right = 695.0
+margin_bottom = 157.0
+custom_fonts/font = SubResource( 7 )
+text = "Continue or exit level?"
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+margin_left = 512.0
+margin_top = 300.0
+margin_right = 513.0
+margin_bottom = 301.0
+rect_scale = Vector2( 4, 4 )
+use_top_left = true
+
+[node name="Base" type="TextureRect" parent="CenterContainer"]
+margin_left = -22.0
+margin_top = -34.0
+margin_right = 22.0
+margin_bottom = 34.0
+texture = ExtResource( 2 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_left = -15.0
+margin_top = -25.0
+margin_right = 15.0
+margin_bottom = 25.0
+
+[node name="continue" type="TextureButton" parent="CenterContainer/VBoxContainer"]
+margin_right = 30.0
+margin_bottom = 14.0
+action_mode = 0
+texture_normal = SubResource( 1 )
+texture_pressed = SubResource( 2 )
+texture_disabled = SubResource( 3 )
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/continue"]
+margin_left = 0.25
+margin_top = 2.5
+margin_right = 33.25
+margin_bottom = 9.5
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 4 )
+text = "Continue"
+
+[node name="exit_dungeon" type="TextureButton" parent="CenterContainer/VBoxContainer"]
+margin_top = 18.0
+margin_right = 30.0
+margin_bottom = 32.0
+action_mode = 0
+texture_normal = SubResource( 1 )
+texture_pressed = SubResource( 2 )
+texture_disabled = SubResource( 3 )
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/exit_dungeon"]
+margin_left = 7.0
+margin_top = 2.5
+margin_right = 35.0
+margin_bottom = 16.5
+custom_fonts/font = SubResource( 5 )
+text = "Exit"
+
+[node name="return" type="TextureButton" parent="CenterContainer/VBoxContainer"]
+margin_top = 36.0
+margin_right = 30.0
+margin_bottom = 50.0
+action_mode = 0
+texture_normal = SubResource( 1 )
+texture_pressed = SubResource( 2 )
+texture_disabled = SubResource( 3 )
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/return"]
+margin_left = 4.0
+margin_top = 3.0
+margin_right = 28.0
+margin_bottom = 10.0
+custom_fonts/font = SubResource( 6 )
+text = "Return"
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/exit_dungeon" to="." method="_on_exit_dungeon_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/return" to="." method="_on_return_pressed"]

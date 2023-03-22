@@ -1,0 +1,33 @@
+[gd_resource type="Resource" load_steps=11 format=2]
+
+[ext_resource path="res://Resources/Character/SpriteFrames/SpriteFrames_DeftSorceress.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://Resources/Character/CollisionShapes/C_DeftSorceress.tres" type="Shape2D" id=2]
+[ext_resource path="res://Scripts/Character/BP_Character.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Characters/Edited Animations/Deft Sorceress Animation_Sheet.png" type="Texture" id=4]
+[ext_resource path="res://Resources/Character/Skills/Ice/Ice_Projectile.tres" type="Resource" id=5]
+[ext_resource path="res://Resources/Character/Skills/Fire/Fire_Projectile.tres" type="Resource" id=6]
+[ext_resource path="res://Resources/Character/Skills/Holy/Holy_Projectile.tres" type="Resource" id=7]
+[ext_resource path="res://Resources/Character/Skills/Lightning/Lightning_Projectile.tres" type="Resource" id=8]
+[ext_resource path="res://Resources/Character/Skills/Earth/Earth_Wall.tres" type="Resource" id=9]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 4 )
+region = Rect2( 2, 16, 13, 16 )
+
+[resource]
+script = ExtResource( 3 )
+characterName = "Sorceress"
+characterCollisionShape = ExtResource( 2 )
+characterAnimations = ExtResource( 1 )
+characterPortrait = SubResource( 1 )
+startingSkills = [ ExtResource( 6 ), ExtResource( 8 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 7 ) ]
+characterDescription = "The sorceress is a skilled mage.
+Wielding her staff, she can summon bursts of elemental energy,
+making her effective against large groups of enemies.
+With only few physical attacks and defenses, 
+she relies on her magic to keep her safe in the dungeon."
+initiative = 3
+stamina = 6
+characterLevel = 0
+characterXP = 0
+characterHealth = 60

@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/Dungeon logic/exit_area.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/exit_level_screen.tscn" type="PackedScene" id=3]
+
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 8, 8 )
+
+[node name="exit_area" type="Area2D"]
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
+
+[node name="exit_level_screen" parent="." instance=ExtResource( 3 )]
+visible = true
+
+[connection signal="body_entered" from="." to="." method="_on_exit_area_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_exit_area_body_exited"]

@@ -1,0 +1,83 @@
+[gd_resource type="Resource" load_steps=18 format=2]
+
+[ext_resource path="res://Assets/Effects and Icons/Icons/wind_projectile3.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Effects and Icons/Skills/Wind/Air Explosion.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/Character/BP_Skills.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Music and Sounds/mixkit-magic-wand-sparkle-3062.mp3" type="AudioStream" id=4]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 2 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 2 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 2 )
+region = Rect2( 96, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 2 )
+region = Rect2( 32, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 2 )
+region = Rect2( 64, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 2 )
+region = Rect2( 96, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 2 )
+region = Rect2( 32, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 2 )
+region = Rect2( 64, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 2 )
+region = Rect2( 96, 64, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=13]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ) ],
+"loop": false,
+"name": "default",
+"speed": 8.0
+} ]
+
+[resource]
+script = ExtResource( 3 )
+name = ""
+description = "Windy explosion to keep enemies off your back."
+level = 1
+cooldown = 6
+turn_cost = 1
+is_on_cooldown = false
+current_cooldown = 0
+skill_type = ""
+elemental_type = "wind"
+effect = ""
+damage = 4
+heal = 0
+cast_range = 1
+travel_range = 1
+aoe_range = 1
+icon = ExtResource( 1 )
+sound_effect = ExtResource( 4 )
+animation = SubResource( 13 )

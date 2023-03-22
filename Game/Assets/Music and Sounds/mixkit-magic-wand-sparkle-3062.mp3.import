@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/mixkit-magic-wand-sparkle-3062.mp3-625b5bfc798af8349b29d7cb3c9f1d3a.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music and Sounds/mixkit-magic-wand-sparkle-3062.mp3"
+dest_files=[ "res://.import/mixkit-magic-wand-sparkle-3062.mp3-625b5bfc798af8349b29d7cb3c9f1d3a.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=9 format=2]
+
+[ext_resource path="res://Scripts/Monster/BP_monster_list.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Monster/Monsters/bosses/great_golden_wyrm.tres" type="Resource" id=2]
+[ext_resource path="res://Resources/Monster/Monsters/dragons/juvenile_brass_dragon.tres" type="Resource" id=3]
+[ext_resource path="res://Resources/Monster/Monsters/dragons/young_copper_dragon.tres" type="Resource" id=4]
+[ext_resource path="res://Resources/Monster/Monsters/dragons/young_bronze_dragon.tres" type="Resource" id=5]
+[ext_resource path="res://Resources/Monster/Monsters/dragons/adult_copper_dragon.tres" type="Resource" id=6]
+[ext_resource path="res://Resources/Monster/Monsters/dragons/mature_brass_dragon.tres" type="Resource" id=7]
+[ext_resource path="res://Resources/Monster/Monsters/dragons/baby_bronze_dragon.tres" type="Resource" id=8]
+
+[resource]
+script = ExtResource( 1 )
+monsters = [ ExtResource( 6 ), ExtResource( 8 ), ExtResource( 3 ), ExtResource( 7 ), ExtResource( 5 ), ExtResource( 4 ) ]
+boss = ExtResource( 2 )

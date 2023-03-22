@@ -1,0 +1,12 @@
+[gd_resource type="Resource" load_steps=6 format=2]
+
+[ext_resource path="res://Scripts/Monster/BP_monster_list.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Monster/Monsters/bosses/skull_spider.tres" type="Resource" id=2]
+[ext_resource path="res://Resources/Monster/Monsters/bats/vampire_bat.tres" type="Resource" id=3]
+[ext_resource path="res://Resources/Monster/Monsters/bats/terror_bat.tres" type="Resource" id=4]
+[ext_resource path="res://Resources/Monster/Monsters/bats/swooping_bat.tres" type="Resource" id=5]
+
+[resource]
+script = ExtResource( 1 )
+monsters = [ ExtResource( 5 ), ExtResource( 4 ), ExtResource( 3 ) ]
+boss = ExtResource( 2 )

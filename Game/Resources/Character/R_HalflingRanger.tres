@@ -1,0 +1,28 @@
+[gd_resource type="Resource" load_steps=7 format=2]
+
+[ext_resource path="res://Resources/Character/CollisionShapes/C_HalflingRanger.tres" type="Shape2D" id=1]
+[ext_resource path="res://Resources/Character/SpriteFrames/SpriteFrames_HalflingRanger.tres" type="SpriteFrames" id=2]
+[ext_resource path="res://Scripts/Character/BP_Character.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Characters/Edited Animations/Halfling Ranger Animation_Sheet.png" type="Texture" id=4]
+[ext_resource path="res://Resources/Character/Skills/Physical/Arrow.tres" type="Resource" id=5]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 4 )
+region = Rect2( 16, 18, 14, 14 )
+
+[resource]
+script = ExtResource( 3 )
+characterName = "Ranger"
+characterCollisionShape = ExtResource( 1 )
+characterAnimations = ExtResource( 2 )
+characterPortrait = SubResource( 1 )
+startingSkills = [ ExtResource( 5 ) ]
+characterDescription = "The ranger is a nimble fighter.
+Using their bow, they can engage enemies at range and keep them from coming closer.
+Their increased speed allows them to stay at a distance even longer,
+And run away from monsters trying to surround them."
+initiative = 3
+stamina = 10
+characterLevel = 0
+characterXP = 0
+characterHealth = 60

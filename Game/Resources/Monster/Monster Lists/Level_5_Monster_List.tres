@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=7 format=2]
+
+[ext_resource path="res://Scripts/Monster/BP_monster_list.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Monster/Monsters/bosses/chimera.tres" type="Resource" id=2]
+[ext_resource path="res://Resources/Monster/Monsters/slimes/acid_ooze.tres" type="Resource" id=3]
+[ext_resource path="res://Resources/Monster/Monsters/slimes/ochre_jelly.tres" type="Resource" id=4]
+[ext_resource path="res://Resources/Monster/Monsters/slimes/death_slime.tres" type="Resource" id=5]
+[ext_resource path="res://Resources/Monster/Monsters/slimes/gelatinous_cube.tres" type="Resource" id=6]
+
+[resource]
+script = ExtResource( 1 )
+monsters = [ ExtResource( 3 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 4 ) ]
+boss = ExtResource( 2 )

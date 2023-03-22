@@ -1,0 +1,26 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/Item/BP_Tradeable_Item.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Items/CollisionShapes/item_rectangleshape2d.tres" type="Shape2D" id=2]
+[ext_resource path="res://Assets/Items/monster_drops/skull.png" type="Texture" id=3]
+
+[resource]
+script = ExtResource( 1 )
+name = "Skull"
+itemDescription = "To be, or not to be: that is the question:
+Whether ’tis nobler in the mind to suffer
+The slings and arrows of outrageous fortune,
+Or to take arms against a sea of troubles,
+And by opposing end them? To die: to sleep;
+No more; and, by a sleep to say we end
+The heart-ache and the thousand natural shocks
+That flesh is heir to, ’tis a consummation
+Devoutly to be wish’d. To die, to sleep;
+To sleep: perchance to dream: ay, there’s the rub.
+Have I broken the space for the item description yet?"
+type = "Tradeable"
+icon = ExtResource( 3 )
+itemCollisionShape = ExtResource( 2 )
+value = 0
+stackable = true
+amount = 0

@@ -1,0 +1,20 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://Assets/Items/helm.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Item/BP_Wearable_Item.gd" type="Script" id=2]
+[ext_resource path="res://Resources/Items/CollisionShapes/item_rectangleshape2d.tres" type="Shape2D" id=3]
+
+[resource]
+script = ExtResource( 2 )
+name = "Helm of Strength"
+itemDescription = "This helmet will make you stronger."
+type = "Wearable"
+icon = ExtResource( 1 )
+itemCollisionShape = ExtResource( 3 )
+value = 100
+stackable = false
+class_restriction = "Warrior"
+damage = 25
+armor = 0
+elemental_type = ""
+effect = ""

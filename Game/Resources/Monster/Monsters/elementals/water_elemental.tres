@@ -1,0 +1,57 @@
+[gd_resource type="Resource" load_steps=11 format=2]
+
+[ext_resource path="res://Assets/Monsters/monster_animations/WaterElementalIdle.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Monster/BP_Monster.gd" type="Script" id=2]
+[ext_resource path="res://Resources/Character/Skills/Physical/Melee.tres" type="Resource" id=3]
+[ext_resource path="res://Resources/Items/Tradeable/water_essence.tres" type="Resource" id=4]
+
+[sub_resource type="StreamTexture" id=7]
+load_path = "res://.import/statue_WaterElementalIdle.png-906afb90fd505f792b73b48501cd8d0f.stex"
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 1 )
+region = Rect2( 16, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 1 )
+region = Rect2( 32, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 1 )
+region = Rect2( 48, 0, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[resource]
+script = ExtResource( 2 )
+monsterName = " Water Elemental"
+description = "Straight from the Primordial planes of water."
+isBoss = false
+initiative = 0
+monsterDrop = ExtResource( 4 )
+max_drop_amount = 4
+wakeup_radius = 72
+monster_type = "Standard"
+stamina = 2
+health = 80
+armor = 0
+damage = 0
+xp_drop = 10
+damage_type = ""
+attack_range = 1
+monster_skills = [ ExtResource( 3 ) ]
+elemental_weakness0 = ""
+elemental_weakness1 = ""
+elemental_weakness2 = ""
+monsterAnimations = SubResource( 2 )
+characterPortrait = SubResource( 7 )

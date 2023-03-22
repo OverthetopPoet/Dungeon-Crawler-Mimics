@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/Monster/BP_monster_list.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Monster/Monsters/bosses/orc_juggernaut.tres" type="Resource" id=2]
+[ext_resource path="res://Resources/Monster/Monsters/orcs/orc_savage.tres" type="Resource" id=3]
+[ext_resource path="res://Resources/Monster/Monsters/orcs/orc_shaman.tres" type="Resource" id=4]
+
+[resource]
+script = ExtResource( 1 )
+monsters = [ ExtResource( 3 ), ExtResource( 4 ) ]
+boss = ExtResource( 2 )

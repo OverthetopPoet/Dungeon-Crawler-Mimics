@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=13 format=2]
+
+[ext_resource path="res://Scripts/Monster/BP_monster_list.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Monster/Monsters/bosses/arch_fiend.tres" type="Resource" id=2]
+[ext_resource path="res://Resources/Monster/Monsters/demons/armored_goliath.tres" type="Resource" id=3]
+[ext_resource path="res://Resources/Monster/Monsters/demons/blade_hellion.tres" type="Resource" id=4]
+[ext_resource path="res://Resources/Monster/Monsters/demons/vicious_miscreant.tres" type="Resource" id=5]
+[ext_resource path="res://Resources/Monster/Monsters/demons/fledgling_demon.tres" type="Resource" id=6]
+[ext_resource path="res://Resources/Monster/Monsters/demons/grinning_gremlin.tres" type="Resource" id=7]
+[ext_resource path="res://Resources/Monster/Monsters/demons/spiked_ravager.tres" type="Resource" id=8]
+[ext_resource path="res://Resources/Monster/Monsters/demons/horned_brute.tres" type="Resource" id=9]
+[ext_resource path="res://Resources/Monster/Monsters/demons/crimson_imp.tres" type="Resource" id=10]
+[ext_resource path="res://Resources/Monster/Monsters/demons/pit_balor.tres" type="Resource" id=11]
+[ext_resource path="res://Resources/Monster/Monsters/demons/tainted_scoundrel.tres" type="Resource" id=12]
+
+[resource]
+script = ExtResource( 1 )
+monsters = [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 10 ), ExtResource( 10 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 9 ), ExtResource( 11 ), ExtResource( 8 ), ExtResource( 12 ), ExtResource( 5 ) ]
+boss = ExtResource( 2 )
